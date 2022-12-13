@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stable_gnn package &mdash; StableGNN  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="stable_gnn.embedding package" href="stable_gnn.embedding.html" />
+    <link rel="prev" title="stable_gnn" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> StableGNN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">stable_gnn</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">stable_gnn package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html">stable_gnn.embedding package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-stable_gnn.explain">stable_gnn.explain module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stable_gnn.explain.Explain"><code class="docutils literal notranslate"><span class="pre">Explain</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-stable_gnn.geom_gcn">stable_gnn.geom_gcn module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stable_gnn.geom_gcn.GeomGCN"><code class="docutils literal notranslate"><span class="pre">GeomGCN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-stable_gnn.graph">stable_gnn.graph module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stable_gnn.graph.Graph"><code class="docutils literal notranslate"><span class="pre">Graph</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-stable_gnn.model_gc">stable_gnn.model_gc module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stable_gnn.model_gc.ModelName"><code class="docutils literal notranslate"><span class="pre">ModelName</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-stable_gnn.model_nc">stable_gnn.model_nc module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stable_gnn.model_nc.ModelName"><code class="docutils literal notranslate"><span class="pre">ModelName</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-stable_gnn">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">StableGNN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">stable_gnn</a></li>
+      <li class="breadcrumb-item active">stable_gnn package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/stable_gnn.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stable-gnn-package">
+<h1>stable_gnn package<a class="headerlink" href="#stable-gnn-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="stable_gnn.embedding.html">stable_gnn.embedding package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stable_gnn.embedding.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stable_gnn.embedding.html#module-stable_gnn.embedding.model">stable_gnn.embedding.model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model.Net"><code class="docutils literal notranslate"><span class="pre">Net</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model.Net.forward"><code class="docutils literal notranslate"><span class="pre">Net.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model.Net.inference"><code class="docutils literal notranslate"><span class="pre">Net.inference()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model.Net.reset_parameters"><code class="docutils literal notranslate"><span class="pre">Net.reset_parameters()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stable_gnn.embedding.html#module-stable_gnn.embedding.model_train_embeddings">stable_gnn.embedding.model_train_embeddings module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings"><code class="docutils literal notranslate"><span class="pre">ModelTrainEmbeddings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings.run"><code class="docutils literal notranslate"><span class="pre">ModelTrainEmbeddings.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model_train_embeddings.OptunaTrainEmbeddings"><code class="docutils literal notranslate"><span class="pre">OptunaTrainEmbeddings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.model_train_embeddings.OptunaTrainEmbeddings.run"><code class="docutils literal notranslate"><span class="pre">OptunaTrainEmbeddings.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stable_gnn.embedding.html#module-stable_gnn.embedding.negative_sampling">stable_gnn.embedding.negative_sampling module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.negative_sampling.NegativeSampler"><code class="docutils literal notranslate"><span class="pre">NegativeSampler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.negative_sampling.NegativeSampler.negative_sampling"><code class="docutils literal notranslate"><span class="pre">NegativeSampler.negative_sampling()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stable_gnn.embedding.html#module-stable_gnn.embedding.sampling">stable_gnn.embedding.sampling module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.Sampler"><code class="docutils literal notranslate"><span class="pre">Sampler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.Sampler.sample"><code class="docutils literal notranslate"><span class="pre">Sampler.sample()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerAPP"><code class="docutils literal notranslate"><span class="pre">SamplerAPP</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerAPP.sample"><code class="docutils literal notranslate"><span class="pre">SamplerAPP.sample()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerContextMatrix"><code class="docutils literal notranslate"><span class="pre">SamplerContextMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerFactorization"><code class="docutils literal notranslate"><span class="pre">SamplerFactorization</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerFactorization.sample"><code class="docutils literal notranslate"><span class="pre">SamplerFactorization.sample()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerRandomWalk"><code class="docutils literal notranslate"><span class="pre">SamplerRandomWalk</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerWithNegSamples"><code class="docutils literal notranslate"><span class="pre">SamplerWithNegSamples</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stable_gnn.embedding.html#stable_gnn.embedding.sampling.SamplerWithNegSamples.sample"><code class="docutils literal notranslate"><span class="pre">SamplerWithNegSamples.sample()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stable_gnn.embedding.html#module-stable_gnn.embedding">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-stable_gnn.explain">
+<span id="stable-gnn-explain-module"></span><h2>stable_gnn.explain module<a class="headerlink" href="#module-stable_gnn.explain" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.explain.Explain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.explain.</span></span><span class="sig-name descname"><span class="pre">Explain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.nn.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adj_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.explain.Explain" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An explainer class for instance-level explanations of Graph Neural Networks. Explanation is Probabilistic Graphical Model in a form of Bayesian network. This Bayesian network estimates the probability that node has the predicted role given a realization of other nodes.</p>
+<p>How to build explanation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">explainer</span> <span class="o">=</span> <span class="n">Explain</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+<span class="n">pgm_explanation</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">structure_learning</span><span class="p">(</span><span class="mi">28</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – (Module): The model to explain.</p></li>
+<li><p><strong>A</strong> – (Tensor): Adjacency matrix of input data.</p></li>
+<li><p><strong>X</strong> – (Tensor): Feature matrix of input data.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.explain.Explain.pgm_conditional_prob">
+<span class="sig-name descname"><span class="pre">pgm_conditional_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pgm_explanation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pgmpy.models.BayesianNetwork</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evidence_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#stable_gnn.explain.Explain.pgm_conditional_prob" title="Permalink to this definition"></a></dt>
+<dd><p>Probability of target node, conditioned on the set of neighbours</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>(</strong><strong>int</strong><strong>)</strong> (<em>target</em>) – Index of node explained</p></li>
+<li><p><strong>Net</strong><strong>)</strong> (<em>pgm_explanation</em><em> (</em><em>Bayesian</em>) – The Bayesian Net explaining the target</p></li>
+<li><p><strong>(</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>)</strong> (<em>evidence_list</em>) – List of neighbours to condition on</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(float): The probability of the target node conditioned on ‘evidence_list’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.explain.Explain.structure_learning">
+<span class="sig-name descname"><span class="pre">structure_learning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pgmpy.models.BayesianNetwork</span></span></span><a class="headerlink" href="#stable_gnn.explain.Explain.structure_learning" title="Permalink to this definition"></a></dt>
+<dd><p>Learn structure of Bayesian Net, which represents pgm explanation of target node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – (int): Index of the node to be explained</p></li>
+<li><p><strong>top_node</strong> – (int, optional): The number of top the most probable nodes for Bayesian Net. If None, all nodes would be used (default: ‘None’)</p></li>
+<li><p><strong>num_samples</strong> – (int): The number of samples for data generation, which is used for structure learning, more number of samples – better learning.</p></li>
+<li><p><strong>pred_threshold</strong> – (float): Probability that the features in each node is perturbed (default: 0.1)</p></li>
+<li><p><strong>child</strong> – (bool, Optional): If False or None, no-child constraint is applied (default: None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(BayesianNetwork): Pgm explanation in Bayesian Net form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.explain.Explain.structure_learning_bamt">
+<span class="sig-name descname"><span class="pre">structure_learning_bamt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pgmpy.models.BayesianNetwork</span></span></span><a class="headerlink" href="#stable_gnn.explain.Explain.structure_learning_bamt" title="Permalink to this definition"></a></dt>
+<dd><p>Learn structure of Bayesian Net, but using bamt framework</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.geom_gcn">
+<span id="stable-gnn-geom-gcn-module"></span><h2>stable_gnn.geom_gcn module<a class="headerlink" href="#module-stable_gnn.geom_gcn" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.geom_gcn.GeomGCN">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.geom_gcn.</span></span><span class="sig-name descname"><span class="pre">GeomGCN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.geom_gcn.GeomGCN" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MessagePassing</span></code></p>
+<p>The graph convolutional operator from the <a class="reference external" href="https://arxiv.org/pdf/2002.05287">“GEOM-GCN: GEOMETRIC GRAPH CONVOLUTIONAL NETWORKS”</a> paper</p>
+<div class="math notranslate nohighlight">
+\[\textbf{e}_{(i,r)}^{v,l+1} = \sum_{u \in N_{i}(v)} \delta(\tau(z_v,z_u),r)(deg(v)deg(u))^{\frac{1}{2}} \textbf{h}_u^l, \forall i \in {g,s}, \forall r \in R\]</div>
+<dl class="simple">
+<dt>..math::</dt><dd><p>textbf{h}_v^{l+1}=sigma(W_l cdot mathbinVert_{iin {g,s}} mathbinVert_{r in R} textbf{e}_{(i,r)}^{v,l+1})</p>
+</dd>
+</dl>
+<p>where :math: ‘textbf{e}_{(i,r)}^{v,l+1}’ is a virtual vertex, recieved by summing up representations :math: ‘textbf{h}_u^l’ of nodes on layer l in structural neighbourhoods :math:’i=s’ and graph neighbourhood :math: ‘i=g’ separately for each neighbors with relation :math:’r’ from the set of relations :math:’R’.
+:math:’z_v’ is an embedding of nodes in latent space, :math:’deg(v)’ is a degree of node :math:’v’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_channels</strong> – (int): Size of each input sample.</p></li>
+<li><p><strong>out_channels</strong> – (int): Size of each output sample.</p></li>
+<li><p><strong>data_name</strong> – (str): Name of your dataset. this is needed for saving embedding.</p></li>
+<li><p><strong>last_layer</strong> – (bool): When true, the virtual vertices are summed, otherwise – concatenated.</p></li>
+<li><p><strong>loss_name</strong> – (str): Name of the loss function fo unsupervised representation learning</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.geom_gcn.GeomGCN.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.geom_gcn.GeomGCN.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Modify representations, convolutional layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – (Tensor): Representations of nodes</p></li>
+<li><p><strong>edge_index</strong> – (Tensor): Edges of input graph</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Hodden representation of nodes on the next layer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.geom_gcn.GeomGCN.message">
+<span class="sig-name descname"><span class="pre">message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.geom_gcn.GeomGCN.message" title="Permalink to this definition"></a></dt>
+<dd><p>Count message from the neighbour</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_j</strong> – Representation of the node neighbour</p></li>
+<li><p><strong>norm</strong> – Normalization term</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Message from the neighbor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.geom_gcn.GeomGCN.reset_parameters">
+<span class="sig-name descname"><span class="pre">reset_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#stable_gnn.geom_gcn.GeomGCN.reset_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Reset parameters</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.graph">
+<span id="stable-gnn-graph-module"></span><h2>stable_gnn.graph module<a class="headerlink" href="#module-stable_gnn.graph" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.graph.Graph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.graph.</span></span><span class="sig-name descname"><span class="pre">Graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.graph.Graph" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">InMemoryDataset</span></code></p>
+<p>Read graph data from txt files and learning structure (denoising) with adjust function. The data can be either one graph or the list of graphs. The data should be located in root/name/raw directory</p>
+<p>For one graph, data should contain three files:</p>
+<ul class="simple">
+<li><p>attrs.txt with N lines, each line means attributes of corresponding node, attributes separated from each other with ‘,’.</p></li>
+<li><p>edges.txt consists of two columns of nodes separeted with ‘,’, each row of this table is a pair of vertices connected by an edge.</p></li>
+<li><p>labels.txt is a column of numbers, meaning labels of nodes. The size of this column is the size of input graph.</p></li>
+</ul>
+<p>For list of graphs, data should contain 3*M similar files, where M is the number of graphs in dataset.</p>
+<p>Denoising now is possible for datasets consisting of ONE graph, for Node Classification tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – (string) Name of your dataset,</p></li>
+<li><p><strong>root</strong> – (string): Root directory where the raw dataset is located and processed graph should be saved.</p></li>
+<li><p><strong>transform</strong> – (callable, optional): A function/transform that takes in an
+<cite>torch_geometric.data.Data</cite> object and returns a transformed
+version. The data object will be transformed before every access.
+(default: <cite>None</cite>)</p></li>
+<li><p><strong>pre_transform</strong> – (callable, optional): A function/transform that takes in
+an <cite>torch_geometric.data.Data</cite> object and returns a
+transformed version. The data object will be transformed before
+being saved to disk. (default: <cite>None</cite>)</p></li>
+<li><p><strong>adjust_flag</strong> – (bool): When set to True, the graph is denoised (default: True)</p></li>
+<li><p><strong>sigma_u</strong> – (float): Variance of randomly generated representations of nodes, required if adjust_flag = True (default: 0.7)</p></li>
+<li><p><strong>sigma_e</strong> – (float, optional) Variance of randomly generated noise, required if adjust_flag = True (default: 0.4)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.graph.Graph.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.graph.Graph.download" title="Permalink to this definition"></a></dt>
+<dd><p>Download the data from the link given</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.graph.Graph.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.graph.Graph.process" title="Permalink to this definition"></a></dt>
+<dd><p>Process the raw files of the input data</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="stable_gnn.graph.Graph.processed_file_names">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processed_file_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#stable_gnn.graph.Graph.processed_file_names" title="Permalink to this definition"></a></dt>
+<dd><p>Return the name of the file of the processed input graph</p>
+<p>return: ([str]): the name of the processed file</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="stable_gnn.graph.Graph.raw_file_names">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw_file_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#stable_gnn.graph.Graph.raw_file_names" title="Permalink to this definition"></a></dt>
+<dd><p>Find str names of the raw input data files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(list): List of str names</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.model_gc">
+<span id="stable-gnn-model-gc-module"></span><h2>stable_gnn.model_gc module<a class="headerlink" href="#module-stable_gnn.model_gc" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.model_gc.ModelName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.model_gc.</span></span><span class="sig-name descname"><span class="pre">ModelName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.model_gc.ModelName" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<p>Model for Graph Classification task</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> – ([Graph]): List of input graphs</p></li>
+<li><p><strong>device</strong> – (device): Device – ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>conv</strong> – (str): Name of the convolution used for Neural Network</p></li>
+<li><p><strong>hidden_layer</strong> – (int): The size of hidden layer (default: 64)</p></li>
+<li><p><strong>dropout</strong> – (int): Dropout (default: 0)</p></li>
+<li><p><strong>num_layers</strong> – (int): Number of layers in the model (default: 2)</p></li>
+<li><p><strong>ssl_flag</strong> – (bool): If True, self supervised loss would be alsooptimized during the training, in addition to semi-supervised</p></li>
+<li><p><strong>heads</strong> – (int): Number of heads in GAT layer</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_gc.ModelName.Extrapolate">
+<span class="sig-name descname"><span class="pre">Extrapolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_init_edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MI'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.model_gc.ModelName.Extrapolate" title="Permalink to this definition"></a></dt>
+<dd><p>Adjust dataset so that to increase extrapolation ability</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train_indices</strong> – ([int]): List of train indices</p></li>
+<li><p><strong>val_indices</strong> – ([int]): List of validation indices</p></li>
+<li><p><strong>init_edges</strong> – (bool): If True, there would be a list of init edges as start for Learning structure of Bayesian Net(default:’False’)</p></li>
+<li><p><strong>remove_init_edges</strong> – If True, it is possible that edges from init_list would be removed during the structure learning of Bayesian Net(default:’False’)</p></li>
+<li><p><strong>white_list</strong> – If True, edges inBayesian Net would be only from this white list (default:’False’)</p></li>
+<li><p><strong>score_func</strong> – (str): Name of score function to optimize, either ‘MI’ or ‘K2’ (default:’MI’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>([Graph], [Graph], [Graph]): Lists of train, test and validation graphs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_gc.ModelName.convert_dataset">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.model_gc.ModelName.convert_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Convert input dataset to train,test, val according to provided indices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – ([Graph]): List of graphs as input dataset</p></li>
+<li><p><strong>train_indices</strong> – ([int]): List of indices for train dataset</p></li>
+<li><p><strong>val_indices</strong> – ([int]): List of indices for validation dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>([Graph],[Graph],[Graph], int): Lists of train and validation graphs and the minimum size among all graphs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_gc.ModelName.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Adj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.model_gc.ModelName.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Count the representation of node on the next layer of the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – (Tensor) Input features</p></li>
+<li><p><strong>edge_index</strong> – (Adj) Edge index of a batch</p></li>
+<li><p><strong>batch</strong> – Batch of data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor, Tensor): Predicted probabilities of labels and predicted degrees of graphs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_gc.ModelName.loss_sup">
+<span class="sig-name descname"><span class="pre">loss_sup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.model_gc.ModelName.loss_sup" title="Permalink to this definition"></a></dt>
+<dd><p>Negative log likelihood loss</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred</strong> – (Tensor): Predicted labels</p></li>
+<li><p><strong>label</strong> – (Tensor): Genuine labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Loss</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_gc.ModelName.self_supervised_loss">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">self_supervised_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.model_gc.ModelName.self_supervised_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Self Supervised Loss for Graph Classsification task, MSE between predicted average degree of each graph and genuine ones</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deg_pred</strong> – (Tensor): Tensor of predicted degrees of graphs in dataset</p></li>
+<li><p><strong>batch</strong> – (): Batch of train data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Loss</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.model_nc">
+<span id="stable-gnn-model-nc-module"></span><h2>stable_gnn.model_nc module<a class="headerlink" href="#module-stable_gnn.model_nc" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.model_nc.ModelName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.model_nc.</span></span><span class="sig-name descname"><span class="pre">ModelName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.model_nc.ModelName" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<p>Model for Node Classification task with Layer, considering grph characteristics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> – (Graph): Input Graph</p></li>
+<li><p><strong>data_name</strong> – (str): Name of the dataset</p></li>
+<li><p><strong>device</strong> – (device): Device ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>hidden_layer</strong> – (int): The size of hidden layer (default: 64)</p></li>
+<li><p><strong>dropout</strong> – (float): Dropout (defualt: 0.0)</p></li>
+<li><p><strong>num_layers</strong> – (int): Number of layers in the model (default:2)</p></li>
+<li><p><strong>ssl_flag</strong> – (bool): If True, self supervised loss will be optimized additionally to semi-supervised (default: False)</p></li>
+<li><p><strong>loss_name</strong> – (str): Name of loss function for embedding learning in GeomGCN layer</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_nc.ModelName.inference">
+<span class="sig-name descname"><span class="pre">inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.model_nc.ModelName.inference" title="Permalink to this definition"></a></dt>
+<dd><p>Count the representation of the node on the next layer of the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – (Graph): Input Graph</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor, Tensor):  Predicted probabilities of labels and predicted degrees of nodes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_nc.ModelName.loss_sup">
+<span class="sig-name descname"><span class="pre">loss_sup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.model_nc.ModelName.loss_sup" title="Permalink to this definition"></a></dt>
+<dd><p>Count negative log likelihood loss function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred</strong> – (Tensor): Predicted labels</p></li>
+<li><p><strong>label</strong> – (Tensor): Genuine labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Loss</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.model_nc.ModelName.self_supervised_loss">
+<span class="sig-name descname"><span class="pre">self_supervised_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deg_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.model_nc.ModelName.self_supervised_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Self supervised loss, predicting degrees of nodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deg_pred</strong> – (Tensor): Predicted degrees</p></li>
+<li><p><strong>dat</strong> – (Tensor): Train mask</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Loss</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-stable_gnn" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="stable_gnn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="stable_gnn.embedding.html" class="btn btn-neutral float-right" title="stable_gnn.embedding package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NCCR Team (ITMO University).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

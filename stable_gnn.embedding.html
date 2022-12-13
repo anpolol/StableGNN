@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stable_gnn.embedding package &mdash; StableGNN  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="stable_gnn package" href="stable_gnn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> StableGNN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">stable_gnn</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="stable_gnn.html">stable_gnn package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="stable_gnn.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">stable_gnn.embedding package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#module-stable_gnn.explain">stable_gnn.explain module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#module-stable_gnn.geom_gcn">stable_gnn.geom_gcn module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#module-stable_gnn.graph">stable_gnn.graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#module-stable_gnn.model_gc">stable_gnn.model_gc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#module-stable_gnn.model_nc">stable_gnn.model_nc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stable_gnn.html#module-stable_gnn">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">StableGNN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">stable_gnn</a></li>
+          <li class="breadcrumb-item"><a href="stable_gnn.html">stable_gnn package</a></li>
+      <li class="breadcrumb-item active">stable_gnn.embedding package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/stable_gnn.embedding.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stable-gnn-embedding-package">
+<h1>stable_gnn.embedding package<a class="headerlink" href="#stable-gnn-embedding-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-stable_gnn.embedding.model">
+<span id="stable-gnn-embedding-model-module"></span><h2>stable_gnn.embedding.model module<a class="headerlink" href="#module-stable_gnn.embedding.model" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model.Net">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.model.</span></span><span class="sig-name descname"><span class="pre">Net</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.model.Net" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<p>The model for learning latent embeddings in unsupervised manner for Geom-GCN layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> – (Graph):</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_function</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+<li><p><strong>conv</strong> – (str): Either ‘GCN’, ‘GAT’ or ‘SAGE’ convolution (default:’GCN’)</p></li>
+<li><p><strong>hidden_layer</strong> – (int): The size of hidden layer (default:64)</p></li>
+<li><p><strong>out_layer</strong> – (int): The size of output layer (default:128)</p></li>
+<li><p><strong>dropout</strong> – (float): Dropout (default:0.0)</p></li>
+<li><p><strong>num_layers</strong> – (int): Number of layers in the model (default:2)</p></li>
+<li><p><strong>heads</strong> – (int): Number of heads in GAT conv (default:1)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model.Net.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.typing.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.loader.neighbor_sampler.EdgeIndex</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.embedding.model.Net.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Find representations of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – (Tensor): Features of nodes</p></li>
+<li><p><strong>adjs</strong> – (EdgeIndex): Edge indices of computational graph for each layer</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Representations of nodes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model.Net.inference">
+<span class="sig-name descname"><span class="pre">inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.embedding.model.Net.inference" title="Permalink to this definition"></a></dt>
+<dd><p>Count representations of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – (Graph): Input data</p></li>
+<li><p><strong>dp</strong> – (float): Dropout (default:0.0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Representations of nodes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model.Net.reset_parameters">
+<span class="sig-name descname"><span class="pre">reset_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#stable_gnn.embedding.model.Net.reset_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Reset parameters</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.embedding.model_train_embeddings">
+<span id="stable-gnn-embedding-model-train-embeddings-module"></span><h2>stable_gnn.embedding.model_train_embeddings module<a class="headerlink" href="#module-stable_gnn.embedding.model_train_embeddings" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.model_train_embeddings.</span></span><span class="sig-name descname"><span class="pre">ModelTrainEmbeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GCN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cuda'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Model for training Net, wcich building embeddings for Geom-GCN layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – (str): Name of input Graph</p></li>
+<li><p><strong>loss_function</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+<li><p><strong>conv</strong> – (str): Name of convolution (default:’GCN’)</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’ (default:’cuda’)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings.run" title="Permalink to this definition"></a></dt>
+<dd><p>Learn embeddings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> – dict[str,float,int,float]: Parameters for learning: size of hidden layer, dropout, number of layers for the model, learning rate</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): The output embeddings</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model_train_embeddings.OptunaTrainEmbeddings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.model_train_embeddings.</span></span><span class="sig-name descname"><span class="pre">OptunaTrainEmbeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GCN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cuda'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.model_train_embeddings.OptunaTrainEmbeddings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings" title="stable_gnn.embedding.model_train_embeddings.ModelTrainEmbeddings"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelTrainEmbeddings</span></code></a></p>
+<p>Model for training Net, wcich building embeddings for Geom-GCN layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – (str): Name of input Graph</p></li>
+<li><p><strong>loss_function</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+<li><p><strong>conv</strong> – (str): Name of convolution (default:’GCN’)</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’ (default:’cuda’)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.model_train_embeddings.OptunaTrainEmbeddings.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_trials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.embedding.model_train_embeddings.OptunaTrainEmbeddings.run" title="Permalink to this definition"></a></dt>
+<dd><p>Tuning parameters for learning embeddings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number_of_trials</strong> – (int): Number of trials for optuna</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(dict[str,float,int,float]): Learned parameters: size of hidden layer, dropout, number of layers for the model, learning rate</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.embedding.negative_sampling">
+<span id="stable-gnn-embedding-negative-sampling-module"></span><h2>stable_gnn.embedding.negative_sampling module<a class="headerlink" href="#module-stable_gnn.embedding.negative_sampling" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.negative_sampling.NegativeSampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.negative_sampling.</span></span><span class="sig-name descname"><span class="pre">NegativeSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.negative_sampling.NegativeSampler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Sampler for negative edges</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – (Graph): Input Graph data</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.negative_sampling.NegativeSampler.negative_sampling">
+<span class="sig-name descname"><span class="pre">negative_sampling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_negative_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.embedding.negative_sampling.NegativeSampler.negative_sampling" title="Permalink to this definition"></a></dt>
+<dd><p>Sample negative edges for batch of nodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch</strong> – (Batch): Nodes for negative sampling</p></li>
+<li><p><strong>num_negative_samples</strong> – (int): number of negative samples for each edge</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Negative samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.embedding.sampling">
+<span id="stable-gnn-embedding-sampling-module"></span><h2>stable_gnn.embedding.sampling module<a class="headerlink" href="#module-stable_gnn.embedding.sampling" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.Sampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.sampling.</span></span><span class="sig-name descname"><span class="pre">Sampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.sampling.Sampler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Base class for sampling of positive and negative edges for unsupervised loss function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> – (str): Name of the inout dataset</p></li>
+<li><p><strong>data</strong> – (Graph): Input dataset</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_info</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.Sampler.sample">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.embedding.sampling.Sampler.sample" title="Permalink to this definition"></a></dt>
+<dd><p>Sample positive edges. Must be implemented</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> – (Batch): Nodes for sampling positive edges for them</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerAPP">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.sampling.</span></span><span class="sig-name descname"><span class="pre">SamplerAPP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerAPP" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stable_gnn.embedding.sampling.SamplerWithNegSamples" title="stable_gnn.embedding.sampling.SamplerWithNegSamples"><code class="xref py py-class docutils literal notranslate"><span class="pre">SamplerWithNegSamples</span></code></a></p>
+<p>Sample positive and negative edges for APP unsupervised loss function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> – (str): Name of the inout dataset</p></li>
+<li><p><strong>data</strong> – (Graph): Input dataset</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_info</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerAPP.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerAPP.sample" title="Permalink to this definition"></a></dt>
+<dd><p>Sample positive and negative edges for batch of nodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> – (Batch): Batch for which sampling should be conducted</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor,Tensor): positive and negative edges</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerContextMatrix">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.sampling.</span></span><span class="sig-name descname"><span class="pre">SamplerContextMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerContextMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stable_gnn.embedding.sampling.SamplerWithNegSamples" title="stable_gnn.embedding.sampling.SamplerWithNegSamples"><code class="xref py py-class docutils literal notranslate"><span class="pre">SamplerWithNegSamples</span></code></a></p>
+<p>Sample positive and negative edges for context matrix based unsupervised loss function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> – (str): Name of the inout dataset</p></li>
+<li><p><strong>data</strong> – (Graph): Input dataset</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_info</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+<li><p><strong>help_dir</strong> – (str): Name of directory for helping data</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerFactorization">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.sampling.</span></span><span class="sig-name descname"><span class="pre">SamplerFactorization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerFactorization" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stable_gnn.embedding.sampling.Sampler" title="stable_gnn.embedding.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sampler</span></code></a></p>
+<p>Sample positive and negative edges for context matrix based unsupervised loss function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> – (str): Name of the inout dataset</p></li>
+<li><p><strong>data</strong> – (Graph): Input dataset</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_info</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerFactorization.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch_geometric.typing.Tensor</span></span></span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerFactorization.sample" title="Permalink to this definition"></a></dt>
+<dd><p>Sample of positive and negative edges for Graph Factorization-based unsupervosed loss functions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> – (Batch): Nodes for which sampling should be conducted</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor): Positive and negative edges</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerRandomWalk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.sampling.</span></span><span class="sig-name descname"><span class="pre">SamplerRandomWalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerRandomWalk" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stable_gnn.embedding.sampling.SamplerWithNegSamples" title="stable_gnn.embedding.sampling.SamplerWithNegSamples"><code class="xref py py-class docutils literal notranslate"><span class="pre">SamplerWithNegSamples</span></code></a></p>
+<p>Sampler for positive and negative edges using random walk based methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> – (str): Name of the inout dataset</p></li>
+<li><p><strong>data</strong> – (Graph): Input dataset</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_info</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerWithNegSamples">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stable_gnn.embedding.sampling.</span></span><span class="sig-name descname"><span class="pre">SamplerWithNegSamples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="stable_gnn.html#stable_gnn.graph.Graph" title="stable_gnn.graph.Graph"><span class="pre">Graph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerWithNegSamples" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stable_gnn.embedding.sampling.Sampler" title="stable_gnn.embedding.sampling.Sampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sampler</span></code></a></p>
+<p>Sampler for positive and negative edges using random walk based methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> – (str): Name of the inout dataset</p></li>
+<li><p><strong>data</strong> – (Graph): Input dataset</p></li>
+<li><p><strong>device</strong> – (device): Either ‘cuda’ or ‘cpu’</p></li>
+<li><p><strong>loss_info</strong> – (dict): Dict of parameters of unsupervised loss function</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="stable_gnn.embedding.sampling.SamplerWithNegSamples.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch_geometric.data.Batch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch_geometric.typing.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#stable_gnn.embedding.sampling.SamplerWithNegSamples.sample" title="Permalink to this definition"></a></dt>
+<dd><p>Sample positive and negative edges for batch nodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> – (Batch): Nodes for positive and negative sampling from them</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Tensor, Tensor): positive and negative samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-stable_gnn.embedding">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-stable_gnn.embedding" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stable_gnn.html" class="btn btn-neutral float-left" title="stable_gnn package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NCCR Team (ITMO University).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
